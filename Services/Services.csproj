@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD3F7B87-E552-4D2E-A986-3AB30ED72F3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>Services</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\Modules\SmileControls\bin\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Modules\Sys.Extensions\Sys.Extensions\bin\x64\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive">
+      <HintPath>..\..\..\Modules\Cards\bin\x64\Debug\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataManager.cs" />
+    <Compile Include="DBManager.cs" />
+    <Compile Include="ImageInfoEventArgs.cs" />
+    <Compile Include="InspectService.cs" />
+    <Compile Include="IOService.cs" />
+    <Compile Include="PLCService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Modules\Cards\Cards.csproj">
+      <Project>{06DE814B-926F-468F-BAA4-FBF405DB8C49}</Project>
+      <Name>Cards</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\COM\COM.Base\COM.Base.csproj">
+      <Project>{E0E45D02-B8D6-4A3C-B651-6088018E0884}</Project>
+      <Name>COM.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\COM\COM\COM.csproj">
+      <Project>{0E115FE1-6670-4970-B204-BA219E28A9F5}</Project>
+      <Name>COM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\DataFormater\DataFormater.csproj">
+      <Project>{345878c4-570c-4d2f-85fd-8c64210c31c0}</Project>
+      <Name>DataFormater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\MVS\MVS.csproj">
+      <Project>{2C0FF859-92C6-4C2A-86E3-ED48A170B545}</Project>
+      <Name>MVS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\SmileObject\SmileObject.csproj">
+      <Project>{A4FCCA03-6B72-4850-9F76-ED9E834B3CFA}</Project>
+      <Name>SmileObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\Sys.Extensions\Sys.Extensions\Sys.Extensions.csproj">
+      <Project>{c38653f8-460c-4a82-bfba-389bb3d953ae}</Project>
+      <Name>Sys.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLAlgorithm\CL.Algorithm.csproj">
+      <Project>{84EEBC7E-E43E-47AD-AB67-EFEF62FE3A0F}</Project>
+      <Name>CL.Algorithm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLControls\CLControls.csproj">
+      <Project>{6C483C8D-F55B-4E47-A98E-72D741D20D86}</Project>
+      <Name>CLControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLObject\CLObject.csproj">
+      <Project>{0252a4e6-c753-485b-8532-97ad4594eca5}</Project>
+      <Name>CLObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper.Contrib">
+      <Version>2.0.78</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmLightLibs">
+      <Version>5.4.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>4.7.5</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

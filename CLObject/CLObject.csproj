@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0252A4E6-C753-485B-8532-97AD4594ECA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLObject</RootNamespace>
+    <AssemblyName>CLObject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper.Contrib">
+      <HintPath>..\..\..\Modules\COM\COM.Base\bin\x64\Debug\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\..\Modules\Cards\bin\x64\Debug\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\Modules\SmileControls\bin\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Modules\Sys.Extensions\Sys.Extensions\bin\x64\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmConfigVO.cs" />
+    <Compile Include="AutoSchedulingVO.cs" />
+    <Compile Include="BatchInfoVO.cs" />
+    <Compile Include="CCDParamVO.cs" />
+    <Compile Include="AcqConfigVO.cs" />
+    <Compile Include="CLAreaEnum.cs" />
+    <Compile Include="CLTypeEnum.cs" />
+    <Compile Include="DefectTypeEnum.cs" />
+    <Compile Include="DefectTypeVO.cs" />
+    <Compile Include="DefectVO.cs" />
+    <Compile Include="InspectionInfoVO.cs" />
+    <Compile Include="InspectParamVO.cs" />
+    <Compile Include="CLRecipeVO.cs" />
+    <Compile Include="PLCConfigVO.cs" />
+    <Compile Include="RecipeParamVO.cs" />
+    <Compile Include="ShowMsgBoxSettingVO.cs" />
+    <Compile Include="StatisticsVO.cs" />
+    <Compile Include="SystemConfigVO.cs" />
+    <Compile Include="SystemSettings.cs" />
+    <Compile Include="CLImageCalInfo.cs" />
+    <Compile Include="CLRunningModeEnum.cs" />
+    <Compile Include="FeatureListItemVO.cs" />
+    <Compile Include="IOConfigVO.cs" />
+    <Compile Include="ProductInfoVO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusInfoVO.cs" />
+    <Compile Include="TrayDryPackageVO.cs" />
+    <Compile Include="YieldAlertVO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Modules\COM\COM.Base\COM.Base.csproj">
+      <Project>{E0E45D02-B8D6-4A3C-B651-6088018E0884}</Project>
+      <Name>COM.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\Sys.Extensions\Sys.Extensions\Sys.Extensions.csproj">
+      <Project>{C38653F8-460C-4A82-BFBA-389BB3D953AE}</Project>
+      <Name>Sys.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

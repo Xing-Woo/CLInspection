@@ -1,0 +1,537 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="DeleteUser">是否刪除使用者?</sys:String>
+    <sys:String x:Key="UserExist">使用者已存在</sys:String>
+    <sys:String x:Key="EditUser">編輯使用者</sys:String>
+    <sys:String x:Key="AddUser">新增使用者</sys:String>
+
+    <sys:String x:Key="UserName">使用者名稱</sys:String>
+    <sys:String x:Key="Password">密碼</sys:String>
+    <sys:String x:Key="Privilege">權限</sys:String>
+
+
+
+    <sys:String x:Key="Reconnect">重新連線</sys:String>
+    <sys:String x:Key="ConnectionStatus">連線狀態</sys:String>
+    <sys:String x:Key="PassFaild">傳送資料失敗</sys:String>
+    <sys:String x:Key="PLCReadFaild">讀取Lot失敗</sys:String>
+    <sys:String x:Key="SetGainOrNot">是否設定Gain</sys:String>
+    <sys:String x:Key="Time">時間</sys:String>
+    <sys:String x:Key="Category">分類</sys:String>
+    <sys:String x:Key="Message">訊息</sys:String>
+    <sys:String x:Key="SaveParamOrNot">是否儲存參數?</sys:String>
+    <sys:String x:Key="SaveRecipeOrNot">是否儲存配方?</sys:String>
+
+    <sys:String x:Key="SaveImage">存圖</sys:String>
+    <sys:String x:Key="ImageFromFile">從檔案中選取影像</sys:String>
+    <sys:String x:Key="SnapShoot">單張取像</sys:String>
+    <sys:String x:Key="StopContinuous">停止連續取像</sys:String>
+    <sys:String x:Key="StartContinuous">開始連續取像</sys:String>
+    <sys:String x:Key="ExportData">匯出資料</sys:String>
+    <sys:String x:Key="LotEndButNotInspection">收到結批訊號,但非檢測中</sys:String>
+    <sys:String x:Key="RecipeHasApplied">配方已應用,但收到Lot訊號</sys:String>
+    <sys:String x:Key="RecipeNameNotMatch">配方名稱與規則不符</sys:String>
+    <sys:String x:Key="InspectException">檢測異常</sys:String>
+    <sys:String x:Key="TypeIDReadError">TypeID讀取異常,請檢查LotID</sys:String>
+    <sys:String x:Key="TypeIDNotMatch">TypeID未匹配到配方</sys:String>
+    <sys:String x:Key="SaveTxtPathIsExist">儲存路徑不存在</sys:String>
+    <sys:String x:Key="PleaseChoose">請選擇或輸入</sys:String>
+    <sys:String x:Key="BusinessNum">LotID</sys:String>
+    <sys:String x:Key="Recipe">配方</sys:String>
+    <sys:String x:Key="SetParamSucess">設定{0}參數成功</sys:String>
+    <sys:String x:Key="SetParamFaild">設定{0}參數失敗</sys:String>
+    <sys:String x:Key="ReadParamSucess">讀取{0}參數成功</sys:String>
+    <sys:String x:Key="ReadParamFaild">讀取{0}參數失敗</sys:String>
+    <sys:String x:Key="RecipeNameRepeat">配方名稱重複</sys:String>
+    <sys:String x:Key="RecipeSaveFaild">配方儲存失敗</sys:String>
+    <sys:String x:Key="RecipePleseEndThisBatch">請先結束本批</sys:String>
+    <sys:String x:Key="RecipeUpdateFaild">更新配方失敗</sys:String>
+    <sys:String x:Key="RecipeSaveFinish">配方儲存完成</sys:String>
+    <sys:String x:Key="RecipeIsExists">配方已存在</sys:String>
+    <sys:String x:Key="RecipeNameIsEmpty">檢測配方名稱未填寫</sys:String>
+    <sys:String x:Key="RecipeIsOld">配方為舊版請重新儲存</sys:String>
+    <sys:String x:Key="ColorCL">彩片</sys:String>
+    <sys:String x:Key="TransparentCL">透片</sys:String>
+    <sys:String x:Key="Type">種類 :</sys:String>
+    <sys:String x:Key="CalParamSaveFinish">校正參數儲存完成</sys:String>
+    <sys:String x:Key="CalAlgSaveFinish">校正算法參數儲存完成</sys:String>
+    <sys:String x:Key="ParameterIsOutOfRange">參數 : {0} 超出設定範圍.</sys:String>
+    <sys:String x:Key="CheckCamConectState">請確認相機連線狀態</sys:String>
+    <sys:String x:Key="ImgIsEmpty">請先輸入影像</sys:String>
+    <sys:String x:Key="Difference">差值</sys:String>
+    <sys:String x:Key="Calibration">校正</sys:String>
+    <sys:String x:Key="Calculate">計算</sys:String>
+    <sys:String x:Key="AutoTargetGV">自動目標灰階</sys:String>
+    <sys:String x:Key="TargetGV">目標灰階 :</sys:String>
+    <sys:String x:Key="CalParam">校正參數</sys:String>
+    <sys:String x:Key="MGVCal">平均灰階計算</sys:String>
+    <sys:String x:Key="OneClickCal">一鍵校正</sys:String>
+    <sys:String x:Key="SetCamDown">設定Cam2</sys:String>
+    <sys:String x:Key="SetValue">設定</sys:String>
+    <sys:String x:Key="GetValue">取值</sys:String>
+    <sys:String x:Key="Light">光源 :</sys:String>
+    <sys:String x:Key="ISPControl">白平衡校正</sys:String>
+    <sys:String x:Key="Raw">Raw Image</sys:String>
+    <sys:String x:Key="CamControl">相機控制</sys:String>
+    <sys:String x:Key="LightControl">光源控制</sys:String>
+    <sys:String x:Key="IsProductionMode">請先結束量產模式!</sys:String>
+    <sys:String x:Key="IsNotIsInspectionMode">收到飛拍訊號,但非檢測!</sys:String>
+    <sys:String x:Key="IsNotProductionMode">收到飛拍訊號,但非量產模式!</sys:String>
+    <sys:String x:Key="SwitchSingle">請切換單動模式!</sys:String>
+    <sys:String x:Key="ProductionMode">量產</sys:String>
+    <sys:String x:Key="SingleMode">單動</sys:String>
+    <sys:String x:Key="DefectInfo">瑕疵資訊</sys:String>
+    <sys:String x:Key="TrayInfo">片料資訊</sys:String>
+    <sys:String x:Key="RecipeListEditPanelEditTitle">編輯 {0} 配方</sys:String>
+    <sys:String x:Key="RecipeListEditPanelNewTitle">新增配方</sys:String>
+    <sys:String x:Key="RecipeListEditPanelDupWarning">配方名稱不可重複</sys:String>
+    <sys:String x:Key="RecipeListEditPanelEmptyWarning">配方名稱不可為空</sys:String>
+    <sys:String x:Key="Light1">光源開關 :</sys:String>
+    <sys:String x:Key="Light2">光源#2 :</sys:String>
+    <sys:String x:Key="CalibrationCaption">校正</sys:String>
+    <sys:String x:Key="InspectionCamUp">CamA</sys:String>
+    <sys:String x:Key="InspectionCamDown">CamB</sys:String>
+    <sys:String x:Key="DefectTypeListEditPriority">順序</sys:String>
+    <sys:String x:Key="ChangeLanguageQuestion">是否要改變語言，並在重啟後生效?</sys:String>
+    <sys:String x:Key="ClearRecipeOrNot">是否還原配方?</sys:String>
+    <sys:String x:Key="OK">OK</sys:String>
+    <sys:String x:Key="NG">NG</sys:String>
+    <sys:String x:Key="Inspection">檢測</sys:String>
+    <sys:String x:Key="SystemVersion">系統版號</sys:String>
+    <sys:String x:Key="CheckEndBatch">是否結束本批?</sys:String>
+    <sys:String x:Key="MsgBoxQuestion">問題</sys:String>
+    <sys:String x:Key="NumTitle">編號</sys:String>
+    <sys:String x:Key="ResultTitle">結果</sys:String>
+    <sys:String x:Key="LevelTitle">分級</sys:String>
+    <sys:String x:Key="DescriptionCaption">描述</sys:String>
+    <sys:String x:Key="NameCaption">名稱</sys:String>
+    <sys:String x:Key="ValueCaption">值</sys:String>
+    <!-- xINg -->
+    <sys:String x:Key="PreTray">上一盤</sys:String>
+    <sys:String x:Key="NextTray">下一盤</sys:String>
+
+    <sys:String x:Key="F_State">狀態</sys:String>
+
+    <sys:String x:Key="F_RaLength">長軸長度(px)</sys:String>
+    <sys:String x:Key="F_RbLength">短軸長度(px)</sys:String>
+    <sys:String x:Key="F_DRaLength">長軸長度(px)</sys:String>
+    <sys:String x:Key="F_DRbLength">短軸長度(px)</sys:String>
+    <sys:String x:Key="F_OpticalAreaAGV">光學區域平均灰階(gv)</sys:String>
+    <sys:String x:Key="F_PatternAreaAGV">Pattern區域平均灰階(gv)</sys:String>
+    <sys:String x:Key="F_JigAreaAGV">治具非片料區域平均灰階(gv)</sys:String>
+    <sys:String x:Key="F_EdgeWidth">Edge寬度(px)</sys:String>
+    <sys:String x:Key="F_CenterDeform">中心變形程度(px)</sys:String>
+    <sys:String x:Key="F_BrightestGV">缺陷最亮灰階(gv)</sys:String>
+    <sys:String x:Key="F_DarkestGV">缺陷最暗灰階(gv)</sys:String>
+    <sys:String x:Key="F_ImagePath">ImagePath</sys:String>
+    <sys:String x:Key="F_ImageID">ImageID</sys:String>
+    <sys:String x:Key="F_SideLengthMultiple">缺陷外框邊長倍數</sys:String>
+    <sys:String x:Key="F_ColorStainGap">彩片花紋空隙面積</sys:String>
+    <sys:String x:Key="F_OverlapArea">OverlapArea(px)</sys:String>
+    <sys:String x:Key="F_BubbleGVMean">真氣泡外圍灰階平均</sys:String>
+    <sys:String x:Key="F_BubbleGVMeanSuspect">疑似氣泡外圍灰階平均(</sys:String>
+
+    <sys:String x:Key="F_DefectID">ID</sys:String>
+    <sys:String x:Key="F_MainDefect">主缺</sys:String>
+
+    <sys:String x:Key="F_TrayIndex">盤號</sys:String>
+    <sys:String x:Key="F_PieceIndex">片號</sys:String>
+    <sys:String x:Key="F_DefectCount">瑕疵數</sys:String>
+    <sys:String x:Key="F_CCDID">CCDID</sys:String>
+
+    <sys:String x:Key="F_Cam">Cam</sys:String>
+    <sys:String x:Key="F_DetectedTime">檢出時間</sys:String>
+    <sys:String x:Key="F_DefectName">瑕疵名稱</sys:String>
+    <sys:String x:Key="F_DefectCcunt">瑕疵數</sys:String>
+    <sys:String x:Key="F_Area">面積</sys:String>
+    <sys:String x:Key="F_GrayValueMean">平均灰階</sys:String>
+    <sys:String x:Key="F_X">X</sys:String>
+    <sys:String x:Key="F_Y">Y</sys:String>
+
+    <sys:String x:Key="F_Width">寬</sys:String>
+    <sys:String x:Key="F_Height">高</sys:String>
+    <sys:String x:Key="ChipNumTitle">片數：</sys:String>
+    <sys:String x:Key="ChipUnit">片</sys:String>
+    <sys:String x:Key="BusinessNumName">LotID :</sys:String>
+    <sys:String x:Key="FlowSheetName">流單 :</sys:String>
+    <sys:String x:Key="ToolBarPauseInspect">暫停檢查</sys:String>
+    <sys:String x:Key="ToolBarStopInspect">結束檢測</sys:String>
+    <sys:String x:Key="LotInputPanelCaption">產品資訊</sys:String>
+    <sys:String x:Key="StatisticPanelThisBatch">本批瑕疵統計</sys:String>
+    <sys:String x:Key="StatisticPanelTDefect">本批各瑕疵總數</sys:String>
+    <sys:String x:Key="StatisticPanelTChipAvg">每片瑕疵平均</sys:String>
+    <sys:String x:Key="StatisticPanelDefectBBL">BBL</sys:String>
+    <sys:String x:Key="StatisticPanelDefectBrc">Brc</sys:String>
+    <sys:String x:Key="StatisticPanelDefectCM">CM</sys:String>
+    <sys:String x:Key="StatisticPanelDefectCL">CL</sys:String>
+
+    <sys:String x:Key="StatisticPanelDefectCBBL">CBBL</sys:String>
+    <sys:String x:Key="StatisticPanelDefectCLD">CLD</sys:String>
+    <sys:String x:Key="StatisticPanelDefectCDD">CDD</sys:String>
+
+    <sys:String x:Key="ScanLine">掃描線</sys:String>
+    <sys:String x:Key="IsLiveTitle">Live</sys:String>
+    <sys:String x:Key="InspectionSettings">檢測設定</sys:String>
+
+    <!-- 商編 -->
+    <sys:String x:Key="LotInputPanelBatchIDTitle">批次編號</sys:String>
+    <sys:String x:Key="LotInputPanelBusinessNumTitle">LotID</sys:String>
+    <sys:String x:Key="LotInputPanelFlowSheetTitle">流單</sys:String>
+    <!-- 統計資訊 -->
+
+    <!-- 歷史 -->
+    <sys:String x:Key="HistoryBatchistCaption">歷史紀錄</sys:String>
+    <sys:String x:Key="HistoryBatchListBatchID">編號</sys:String>
+    <sys:String x:Key="HistoryBatchListBusinessNum">LotID</sys:String>
+    <sys:String x:Key="HistoryBatchListStartTime">開始時間</sys:String>
+    <sys:String x:Key="HistoryBatchListStopTime">結束時間</sys:String>
+    <sys:String x:Key="HistoryBatchListRecipe">配方</sys:String>
+    <sys:String x:Key="HistoryBatchListPieceNum">Inspect數</sys:String>
+    <sys:String x:Key="HistoryBatchListProductivity">產能</sys:String>
+    <sys:String x:Key="HistoryBatchListCLType">種類</sys:String>
+    <sys:String x:Key="HistoryBatchListYield">良率(%)</sys:String>
+
+
+    <sys:String x:Key="HistoryBatchListOKNum">OK數</sys:String>
+    <sys:String x:Key="HistoryBatchListNGNum">NG數</sys:String>
+    <sys:String x:Key="HistoryBatchListEmptyNum">Empty數</sys:String>
+    <sys:String x:Key="HistoryBatchListDefectCount">瑕疵總數</sys:String>
+    <sys:String x:Key="HistoryBatchListBBLCnt">BBL數</sys:String>
+    <sys:String x:Key="HistoryBatchListBrcCnt">Brc數</sys:String>
+    <sys:String x:Key="HistoryBatchListCMCnt">CM數</sys:String>
+    <sys:String x:Key="HistoryBatchListCLCnt">CL數</sys:String>
+
+    <sys:String x:Key="HistoryBatchListCLDCnt">LD數</sys:String>
+    <sys:String x:Key="HistoryBatchListCDDCnt">BD數</sys:String>
+
+    <!-- 配方列表 - 編輯 -->
+    <sys:String x:Key="RecipePanelAdd">新建配方</sys:String>
+    <sys:String x:Key="RecipePanelRecipeName">配方名稱：</sys:String>
+    <sys:String x:Key="RecipePanelSaveImgParams">影像儲存設定</sys:String>
+    <sys:String x:Key="RecipePanelCamUpParams">CamA參數</sys:String>
+    <sys:String x:Key="RecipePanelCamDownParams">CamB參數</sys:String>
+    <sys:String x:Key="RecipePanelIlluminationUp">光源亮度#1 :</sys:String>
+    <sys:String x:Key="RecipePanelIlluminationDown">光源亮度#2 :</sys:String>
+    <sys:String x:Key="RecipePanelInspParams">檢測參數</sys:String>
+
+    <sys:String x:Key="RecipePanelLocateParams">定位參數</sys:String>
+    <sys:String x:Key="RecipePanelOpticalParams">光學區參數</sys:String>
+    <sys:String x:Key="RecipePanelPatternParams">花紋區參數</sys:String>
+    <sys:String x:Key="RecipePanelEdgeParams">邊緣區參數</sys:String>
+
+    <sys:String x:Key="RecipePanelParamsTest">參數測試</sys:String>
+    <sys:String x:Key="RecipePanelParamsSetGain">SetGain</sys:String>
+    <sys:String x:Key="RecipePanelParamsSave">參數儲存</sys:String>
+    <sys:String x:Key="RecipePanelParamsDelet">參數回復</sys:String>
+    <!-- Base -->
+    <sys:String x:Key="MainMenuInspection">檢查</sys:String>
+    <sys:String x:Key="MainMenuRecipe">配方</sys:String>
+    <sys:String x:Key="MainMenuHistory">記錄</sys:String>
+    <sys:String x:Key="MainMenuConfig">系統</sys:String>
+    <sys:String x:Key="LotTitle">產品支號：</sys:String>
+    <sys:String x:Key="RecipeTitle">檢查配方：</sys:String>
+    <sys:String x:Key="TimeTitle">時間：</sys:String>
+    <sys:String x:Key="LengthTitle">米數：</sys:String>
+    <sys:String x:Key="LengthUnit">米</sys:String>
+    <sys:String x:Key="UserTitle">身份：</sys:String>
+    <sys:String x:Key="SpeedTitle">機速：</sys:String>
+    <sys:String x:Key="SpeedUnit">米/分</sys:String>
+    <sys:String x:Key="IllUsingTimeName">光源使用時間：</sys:String>
+    <sys:String x:Key="IllUsingTimeUnitName">分鐘</sys:String>
+    <sys:String x:Key="RollIDName">卷料號碼：</sys:String>
+    <sys:String x:Key="VersionTitle">版本 :</sys:String>
+    <sys:String x:Key="InspectingStatus">檢測中...</sys:String>
+    <sys:String x:Key="PauseStatus">暫停</sys:String>
+    <sys:String x:Key="AlarmStatus">異常</sys:String>
+    <sys:String x:Key="ReadyStatus">待命</sys:String>
+    <sys:String x:Key="NotReadyStatus">未準備好</sys:String>
+    <sys:String x:Key="DialogRoot">DialogRoot</sys:String>
+    <sys:String x:Key="DialogRootAdd">DialogRootAdd</sys:String>
+    <sys:String x:Key="UpdateTime">修改時間</sys:String>
+    <sys:String x:Key="CreateTime">建立時間</sys:String>
+    <sys:String x:Key="LastEdit">編輯者</sys:String>
+    
+    <sys:String x:Key="KeywordHint">輸入關鍵字篩選...</sys:String>
+    <sys:String x:Key="ParamName">參數名</sys:String>
+    <sys:String x:Key="ParamValue">參數值</sys:String>
+    <sys:String x:Key="Description">說明</sys:String>
+    <sys:String x:Key="Enable">啟用</sys:String>
+    <sys:String x:Key="Up">向上移動</sys:String>
+    <sys:String x:Key="Down">向下移動</sys:String>
+
+
+    <!-- Main Toolbar-->
+    <sys:String x:Key="ToolBarStartInspect">開始檢測</sys:String>
+    <sys:String x:Key="ToolBarChangeRoll">換卷</sys:String>
+    <sys:String x:Key="ToolBarCT">手動CT</sys:String>
+    <sys:String x:Key="ToolBarExit">關閉系統</sys:String>
+    <sys:String x:Key="ToolBarCTNext">啟用下一卷CT</sys:String>
+    <sys:String x:Key="ToolBarCTRunning">CT執行中</sys:String>
+    <sys:String x:Key="ToolBarCTPrompt">確定執行自動偏光鏡?</sys:String>
+    <sys:String x:Key="ToolBarCloseExportWarning">資料仍在匯出打包中，請稍後再關閉系統。</sys:String>
+    <sys:String x:Key="ToolBarCloseUploadWarning">上傳佇列仍還有資料未上傳，請稍後再關閉系統。</sys:String>
+    <sys:String x:Key="ToolBarClosePrompt">確定關閉系統?</sys:String>
+    <sys:String x:Key="ToolBarCloseEndLot">請先結束本批。</sys:String>
+    <sys:String x:Key="ScreenShot">螢幕截圖</sys:String>
+    <sys:String x:Key="ChangeLanguage">改變語言</sys:String>
+    <!-- LoginPanel -->
+    <sys:String x:Key="LoginPanelCaption">使用者登入</sys:String>
+    <sys:String x:Key="LoginPanelAccountTitle">帳　　號：</sys:String>
+    <sys:String x:Key="LoginPanelPasswordTitle">密　　碼：</sys:String>
+    <sys:String x:Key="LoginPanelLoginBtnTitle">登入</sys:String>
+    <sys:String x:Key="LoginPanelCancelBtnTitle">登出</sys:String>
+    <sys:String x:Key="LoginPanelModifyPassBtnTitle">修改密碼：</sys:String>
+    <sys:String x:Key="LoginPanelPasswordWarningMsg">修改密碼不可空白</sys:String>
+
+    <!-- System Overview Panel -->
+    <sys:String x:Key="SysOverviewPanelCaption">系統狀態</sys:String>
+    <sys:String x:Key="SysOverviewPanelPCTitle">主機</sys:String>
+    <sys:String x:Key="SysOverviewPanelStatusTitle">狀態</sys:String>
+    <sys:String x:Key="SysOverviewPanelMsgTitle">訊息</sys:String>
+    <sys:String x:Key="SysOverviewPanelOKBtnTitle">確認</sys:String>
+
+    <!-- ///// 檢測頁面 ///// -->
+    <!-- 即時 / 離線檢測-->
+    <sys:String x:Key="InlineInspectCaption">即時檢測</sys:String>
+    <sys:String x:Key="OfflineInspectCaption">離線檢測</sys:String>
+
+    <!-- 輸入支號 -->
+    <sys:String x:Key="LotInputPanelLotTitle">支號</sys:String>
+    <sys:String x:Key="LotInputPanelProductCodeTitle">產品碼</sys:String>
+    <sys:String x:Key="LotInputPanelRecipeTitle">配方</sys:String>
+    <sys:String x:Key="LotInputPanelCurrentTitle">目前</sys:String>
+    <sys:String x:Key="LotInputPanelNextTitle">下批</sys:String>
+    <sys:String x:Key="LotInputPanelCTText">轉偏光鏡</sys:String>
+    <sys:String x:Key="LotInputPanelDetailRecipeTitle">配　　方</sys:String>
+    <sys:String x:Key="LotInputPanelDetailRollNameTitle">支　　號</sys:String>
+    <sys:String x:Key="LotInputPanelCustomCurrentFieldsInvalid">目前 - {0} 欄位輸入格式錯誤</sys:String>
+    <sys:String x:Key="LotInputPanelCustomNextFieldsInvalid">下批 - {0} 欄位輸入格式錯誤</sys:String>
+
+    <!-- 統計資訊 -->
+    <sys:String x:Key="StatisticPanelCaption">統計資訊</sys:String>
+    <sys:String x:Key="StatisticPanelDefect">缺陷</sys:String>
+    <sys:String x:Key="StatisticPanelCCD">相機</sys:String>
+    <sys:String x:Key="StatisticPanelDefectCnt">缺陷個數</sys:String>
+    <sys:String x:Key="StatisticPanelDT">缺陷 DT</sys:String>
+    <sys:String x:Key="StatisticPanelAvgGray">平均灰階</sys:String>
+    <sys:String x:Key="StatisticPanelByLastTenRollDTTitle">近10軸DT</sys:String>
+    <sys:String x:Key="StatisticPanelByLengthTitle">依米數</sys:String>
+    <sys:String x:Key="StatisticPanelByAreaTitle">依面積</sys:String>
+    <sys:String x:Key="StatisticPanelDefectStepTypeAuto">自動</sys:String>
+    <sys:String x:Key="StatisticPanelDefectStepTypeCustom">自訂</sys:String>
+    <sys:String x:Key="StatisticPanelLaneCountTitle">子卷數量：</sys:String>
+    <sys:String x:Key="StatisticPanelSum">總和</sys:String>
+
+    <!-- 系統日誌 -->
+    <sys:String x:Key="SystemLogPanelCaption">系統日誌</sys:String>
+    <sys:String x:Key="CurrentStatus">當前</sys:String>
+    <sys:String x:Key="SystemLogPanelMsg">訊息</sys:String>
+    <sys:String x:Key="SystemLogPanelAlarm">異常</sys:String>
+    <sys:String x:Key="SystemLogPanelModify">修改</sys:String>
+    <sys:String x:Key="SystemLogPanelCurrent">目前狀態</sys:String>
+    <sys:String x:Key="SystemLogPanelTransTime">時間</sys:String>
+    <sys:String x:Key="SystemLogPanelTransPosition">米數</sys:String>
+    <sys:String x:Key="SystemLogPanelCategory">分類</sys:String>
+    <sys:String x:Key="SystemLogPanelMessage">訊息</sys:String>
+
+    <!-- 缺陷分佈圖 -->
+    <sys:String x:Key="RDMControlFullLengthTitle">全米顯示</sys:String>
+    <!-- 缺陷分佈圖 - 圖例與所選缺陷資訊-->
+    <sys:String x:Key="DefectMapInfoPanelDefectInfoPanelCaption">缺陷資訊</sys:String>
+    <sys:String x:Key="DefectMapInfoPanelLegendInfoPanelCaption">圖例</sys:String>
+    <!-- 缺陷資訊 -->
+    <sys:String x:Key="DefectInfoPanelFeatureTitle">特徵項目</sys:String>
+    <sys:String x:Key="DefectInfoPanelValueTitle">特徵值</sys:String>
+    <!-- 圖例 -->
+    <sys:String x:Key="LegendInfoPanelSymbolTitle">符號</sys:String>
+    <sys:String x:Key="LegendInfoPanelDefectNameTitle">缺陷名稱</sys:String>
+    <sys:String x:Key="LegendInfoPanelDefectCountTitle">數量</sys:String>
+    <!-- 缺陷小圖 -->
+    <sys:String x:Key="DefectImagePanelChannelTitle">光學：</sys:String>
+    <sys:String x:Key="DefectImagePanelClassTitle">分類：</sys:String>
+    <sys:String x:Key="DefectImagePanelSizeTitle">尺寸：</sys:String>
+    <!-- 缺陷分佈圖資訊 -->
+    <sys:String x:Key="DefectMapInfoPanelFillGrayColor">灰階著色</sys:String>
+    <!-- 即時檢測 -->
+    <sys:String x:Key="InlineInspectionPanelBasicTitle">基本資訊</sys:String>
+    <sys:String x:Key="InlineInspectionPanelImageListTitle">小圖列表</sys:String>
+    <sys:String x:Key="InlineInspectionPanelDefectCount">缺陷個數</sys:String>
+    <sys:String x:Key="InlineInspectionPanelDefectDT">缺陷 DT</sys:String>
+    <sys:String x:Key="InlineInspectionPanelAvgGV">平均灰階</sys:String>
+    <!-- ///// 配方頁面 ///// -->
+    <sys:String x:Key="RecipePageRecipeConfig">配方設定</sys:String>
+    <sys:String x:Key="RecipePageCalibration">校正</sys:String>
+    <sys:String x:Key="RecipePageDefectType">缺陷類別</sys:String>
+    <sys:String x:Key="RecipePageAlarmConfig">異常警報</sys:String>
+    <sys:String x:Key="RecipePageYieldAlert">良率警報</sys:String>
+
+    <sys:String x:Key="Yield">良率(%) : </sys:String>
+    <sys:String x:Key="WarningNumber">警示數 : </sys:String>
+    <sys:String x:Key="StopNumber">停機數 : </sys:String>
+    <!-- 配方設定 -->
+    <sys:String x:Key="RecipeListCaption">配方列表</sys:String>
+
+    <sys:String x:Key="RecipeToolBarAdd">新增</sys:String>
+    <sys:String x:Key="RecipeToolBarEdit">編輯</sys:String>
+    <sys:String x:Key="RecipeToolBarCopy">複製</sys:String>
+    <sys:String x:Key="RecipeToolBarDelete">刪除</sys:String>
+    <sys:String x:Key="RecipeToolBarSave">儲存</sys:String>
+    <sys:String x:Key="RecipeToolBarLog">記錄</sys:String>
+
+    <!-- 配方列表 -->
+    <sys:String x:Key="RecipeListViewRecipeName">配方名稱</sys:String>
+    <sys:String x:Key="RecipeListPanelDialog">RecipeListPanelDialog</sys:String>
+    <sys:String x:Key="RecipeListPanelRecipeID">配方ID</sys:String>
+    <sys:String x:Key="RecipeListPanelDelWarning">所選配方已被使用，無法刪除</sys:String>
+    <sys:String x:Key="RecipeListPanelDelPrompt">確定刪除配方: {0}</sys:String>
+    <sys:String x:Key="RecipeListPanelDelPromptTitle">確定刪除?</sys:String>
+    <sys:String x:Key="RecipeListPanelDelSuccess">刪除配方: {0} 成功</sys:String>
+    <sys:String x:Key="RecipeListPanelDelFailure">刪除配方: {0} 失敗</sys:String>
+
+
+    <!-- 缺陷類別 -->
+    <sys:String x:Key="DefectTypeListEditDefectType">ID</sys:String>
+    <sys:String x:Key="DefectTypeListEditDefectName">缺陷名稱</sys:String>
+    <sys:String x:Key="DefectTypeListEditSymbol">符號</sys:String>
+    <sys:String x:Key="DefectTypeListEditArea">Zone</sys:String>
+    <sys:String x:Key="DefectTypeListEditColor">顏色</sys:String>
+    <sys:String x:Key="DefectTypeListEditFontSize">大小</sys:String>
+    <sys:String x:Key="DefectTypeListEditHint">新增符號...</sys:String>
+    <sys:String x:Key="DefectTypeListEditDelWarning">此缺陷正在使用中，無法刪除。</sys:String>
+    <sys:String x:Key="DefectTypeListEditDelPrompt">確定刪除「{0}」缺陷類別?</sys:String>
+    <sys:String x:Key="DefectTypeListEditDelPromptTitle">確定刪除?</sys:String>
+
+
+    <!-- 異常警報 -->
+    <sys:String x:Key="AlarmActionCaption">異常動作</sys:String>
+
+    <!-- 異常動作 -->
+    <sys:String x:Key="AlarmActionListEditType">異常類別</sys:String>
+    <sys:String x:Key="AlarmActionListEditLight">燈號</sys:String>
+    <sys:String x:Key="AlarmActionListEditBuzzer">蜂嗚器</sys:String>
+
+
+
+    <!-- ///// 記錄頁面 ///// -->
+    <sys:String x:Key="RecordPageHistory">檢測記錄</sys:String>
+    <sys:String x:Key="RecordPageLog">系統日誌</sys:String>
+
+    <!-- 查詢日期區間 -->
+    <sys:String x:Key="QueryDateTodayCaption">今天</sys:String>
+    <sys:String x:Key="QueryDateLastweekCaption">最近一週</sys:String>
+    <sys:String x:Key="QueryDateLastmonthCaption">最近一個月</sys:String>
+    <sys:String x:Key="QueryDateQueryCaption">查詢</sys:String>
+
+    <!-- 檢測記錄 -->
+    <sys:String x:Key="HistoryRollListCaption">卷料列表</sys:String>
+    <sys:String x:Key="HistoryDefectMapCaption">缺陷分佈圖</sys:String>
+    <sys:String x:Key="HistoryDefectListCaption">缺陷列表</sys:String>
+    <sys:String x:Key="HistoryPieceCaption">單片資訊</sys:String>
+    <sys:String x:Key="HistoryBatchInfoCaption">批次紀錄</sys:String>
+
+    <!-- 系統日誌列表 -->
+    <sys:String x:Key="LogListTypeHint">請選擇日誌類型...</sys:String>
+    <sys:String x:Key="LogListTypeTransTime">發生時間</sys:String>
+    <sys:String x:Key="LogListTypeTransPosition">發生米數</sys:String>
+    <sys:String x:Key="LogListTypeEventType">類型</sys:String>
+    <sys:String x:Key="LogListTypeCategory">類別項目</sys:String>
+    <sys:String x:Key="LogListTypeUser">User</sys:String>
+    <sys:String x:Key="LogListTypeRecipe">Recipe</sys:String>
+    <sys:String x:Key="LogListTypeParamName">ParamName</sys:String>
+    <sys:String x:Key="LogListTypeMessage">訊息內容</sys:String>
+
+    <!-- ///// 系統頁面 ///// -->
+    <sys:String x:Key="SystemPageSystemInfo">系統資訊</sys:String>
+    <sys:String x:Key="SystemPageCCDCalibration">相機校正</sys:String>
+    <sys:String x:Key="SystemPageProfile">波型光源</sys:String>
+    <sys:String x:Key="SystemPageTriggerConfig">計米設定</sys:String>
+    <sys:String x:Key="SystemPageIOConfig">IO 控制</sys:String>
+    <sys:String x:Key="SystemPagePLC">PLC 控制</sys:String>
+    <sys:String x:Key="SystemPageUser">User控制</sys:String>
+    <sys:String x:Key="SystemOfflineTest">Offline測試</sys:String>
+    <sys:String x:Key="SystemPageReportOutPut">AOI報告輸出</sys:String>
+    <sys:String x:Key="SystemPageDataOutPut">AOI報告輸出</sys:String>
+    <sys:String x:Key="SystemPageLocalOutPut">Local報告輸出</sys:String>
+    <sys:String x:Key="SystemPageUploadConfig">上傳設定</sys:String>
+    <sys:String x:Key="SystemPageDisplayConfig">顯示設定</sys:String>
+    <sys:String x:Key="SystemPageDelayAction">延遲動作</sys:String>
+    <sys:String x:Key="SystemPageBackupRestore">備份還原</sys:String>
+    <sys:String x:Key="SystemPageHardwareControl">硬體控制</sys:String>
+    <sys:String x:Key="SystemPageCamControl">相機控制</sys:String>
+    <!-- 系統資訊 -->
+    <sys:String x:Key="SystemInfoPanelStatusTitle">系統狀態：</sys:String>
+    <sys:String x:Key="SystemInfoPanelHostTitle">主機：</sys:String>
+
+
+    <!-- 顯示設定 -->
+    <sys:String x:Key="DisplayConfigUnit">單位</sys:String>
+
+
+
+    <!-- 取像服務訊息 -->
+    <sys:String x:Key="ACQ_ALARM">取像服務異常</sys:String>
+    <sys:String x:Key="ACQ_READY">取像服務準備好了</sys:String>
+    <sys:String x:Key="START_GRAB">取像中...</sys:String>
+    <sys:String x:Key="STOP_GRAB">停止取像</sys:String>
+
+
+    <!-- Event Log -->
+    <sys:String x:Key="EVENT_SYS_STATUS_CATEGORY">系統狀態變更</sys:String>
+    <sys:String x:Key="EVENT_SYS_ALARM_CATEGORY">系統異常</sys:String>
+    <sys:String x:Key="EVENT_MSG_INSPECTION_ON">開始檢測...</sys:String>
+    <sys:String x:Key="EVENT_MSG_INSPECTION_OFF">停止檢測</sys:String>
+    <sys:String x:Key="EVENT_CAT_INSPECT_INFO">檢測資訊</sys:String>
+    <sys:String x:Key="EVENT_MSG_INSPECTION_ON_FAILURE">開始檢測失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_INSPECTION_OFF_FAILURE">停止檢測失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_START_CHANGE_ROLL">換批</sys:String>
+    <sys:String x:Key="EVENT_MSG_CHANGE_ROLL_DONE">換批完成</sys:String>
+    <sys:String x:Key="EVENT_MSG_CHANGE_ROLL_FAILURE">換批異常</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_RECIPE_DONE">更新配方成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_RECIPE_FAILURE">更新配方失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_CHANGE_RECIPE_FAILURE">變更配方失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_UNIT_CONFIG_DONE">更新單位設定成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_UNIT_CONFIG_FAILURE">更新單位設定失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_CAL_CONFIG_DONE">更新校正設定成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_CAL_CONFIG_FAILURE">更新校正設定失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_INSP_PARAM_DONE">更新檢測參數成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_INSP_PARAM_FAILURE">更新檢測參數失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UDPATE_CLIENT_INSP_WIDTH_DONE">更新檢測範圍成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UDPATE_CLIENT_INSP_WIDTH_FAILURE">更新檢測範圍失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_CLASSIFY_SUCCESS">更新分類器成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_CLASSIFY_FAILURE">更新分類器失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_CLASS_CONFIG_SUCCESS">更新分類動作成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_CLASS_CONFIG_FAILURE">更新分類動作失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_DEFECTTYPE_SUCCESS">更新缺陷列表成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_DEFECTTYPE_FAILURE">更新缺陷列表失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_PERIOD_SUCCESS">更新週期設定成功</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_CLIENT_PERIOD_FAILURE">更新週期設定失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_ENABLE_CT">執行自動偏光鏡</sys:String>
+    <sys:String x:Key="EVENT_MSG_AUTH_FAILURE">檔案伺服器認證失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_FILE_UPLOAD_CATEGORY">上傳資料</sys:String>
+    <sys:String x:Key="EVENT_MSG_ACQ_FAILURE">開始取像失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_ILLU_FAILURE">更新光源失敗</sys:String>
+    <sys:String x:Key="EVENT_MSG_UPDATE_ILLU_SUCCESS">更新光源成功</sys:String>
+    <sys:String x:Key="CLIENT_CONNECT_FAILURE">連線子機失敗</sys:String>
+    <sys:String x:Key="CLIENT_SHUTDOWN_FAILURE">關閉子機連線失敗</sys:String>
+    <sys:String x:Key="CLIENT_CONNECT_MASTER_FAILURE">呼叫子機連線主機失敗</sys:String>
+    <sys:String x:Key="CLIENT_REPORT_STATUS_FAILURE">取得子機狀態失敗</sys:String>
+    <sys:String x:Key="CLIENT_INSPECTION_FAILURE">呼叫子機開關檢測失敗</sys:String>
+    <sys:String x:Key="CLIENT_ACQUISITION_FAILURE">呼叫子機開關取像失敗</sys:String>
+    <sys:String x:Key="CLIENT_ENABLE_PROFILE_FAILURE">呼叫子機開關Profile失敗</sys:String>
+    <sys:String x:Key="CLIENT_ENABLE_CT_FAILURE">呼叫子機自動偏光鏡失敗</sys:String>
+    <sys:String x:Key="CLIENT_MANUAL_MOTION_FAILURE">呼叫子機手動轉動偏光鏡失敗</sys:String>
+    <sys:String x:Key="CLIENT_ENABLE_OFFLINE_INSP_FAILURE">呼叫子機開關離線檢測失敗</sys:String>
+    <sys:String x:Key="CLIENT_ENABLE_SAVEIMG_FAILURE">呼叫子機開關保存原圖失敗</sys:String>
+    <sys:String x:Key="CLIENT_CLASSIFY_RESULT_FAILURE">回報子機分類結果失敗</sys:String>
+    <sys:String x:Key="CLIENT_GET_DEFAULT_ALG_FAILURE">取得預設算法參數失敗</sys:String>
+    <sys:String x:Key="CLIENT_GET_DEFAULT_CCD_PARAM_FAILURE">取得預設CCD參數失敗</sys:String>
+    <sys:String x:Key="CLIENT_NEWROLL_FAILURE">呼叫子機換卷失敗</sys:String>
+    <sys:String x:Key="CLIENT_UPDATE_RECIPE_FAILURE">呼叫子機更新配方失敗</sys:String>
+    <sys:String x:Key="CLIENT_UPDATE_UNIT_FAILURE">呼叫子機更新單位設定失敗</sys:String>
+    <sys:String x:Key="CLIENT_UPDATE_CAL_FAILURE">呼叫子機更新校正設定失敗</sys:String>
+    <sys:String x:Key="CLIENT_UPDATE_INSP_FAILURE">呼叫子機更新檢測參數失敗</sys:String>
+    <sys:String x:Key="CLIENT_UPDATE_WIDTH_FAILURE">呼叫子機更新檢測範圍失敗</sys:String>
+    <sys:String x:Key="MASTER_NO_LICENSE_PROMPT">無授權金鑰，系統即將關閉</sys:String>
+    <sys:String x:Key="MASTER_IS_RUNNING_DONT_OPEN_AGAIN">檢測程式運行中，請勿重複開啟!</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CCF4C0B-2C16-4E11-B299-0C9675D5A5A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CLInspection</RootNamespace>
+    <AssemblyName>CLInspector</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon-1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616" />
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Modules\COM.Service\bin\x64\Debug\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\Modules\SmileControls\bin\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="hasp_net_windows">
+      <HintPath>bin\x64\Debug\hasp_net_windows.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors">
+      <HintPath>..\..\..\Modules\MaterialDesign\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf">
+      <HintPath>..\..\..\Modules\MaterialDesign\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors">
+      <HintPath>..\..\..\Modules\MaterialDesign\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Modules\Sys.Extensions\Sys.Extensions\bin\x64\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive, Version=5.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Modules\Cards\bin\x64\Debug\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Base\EditDataGridView.xaml.cs">
+      <DependentUpon>EditDataGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\Bool2InverseConverter.cs" />
+    <Compile Include="Converter\Bool2OKNGConverter.cs" />
+    <Compile Include="Converter\Bool2VisibilityConverter.cs" />
+    <Compile Include="Converter\ChannelNameConverter.cs" />
+    <Compile Include="Converter\EventTypeEnumConverter.cs" />
+    <Compile Include="Converter\Long2DefectTypeConverter.cs" />
+    <Compile Include="Inspect\InlineInspectionPanel.xaml.cs">
+      <DependentUpon>InlineInspectionPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inspect\InspectionInfoPanel.xaml.cs">
+      <DependentUpon>InspectionInfoPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inspect\LegendInfoPanel.xaml.cs">
+      <DependentUpon>LegendInfoPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inspect\LotInputPanel.xaml.cs">
+      <DependentUpon>LotInputPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inspect\ResultInfo.xaml.cs">
+      <DependentUpon>ResultInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inspect\StatisticPanel.xaml.cs">
+      <DependentUpon>StatisticPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inspect\SystemLogPanel.xaml.cs">
+      <DependentUpon>SystemLogPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CLResInfoVO.cs" />
+    <Compile Include="Model\DefectInfoVO.cs" />
+    <Compile Include="Model\LocPackVO.cs" />
+    <Compile Include="Model\MessengerMsgs.cs" />
+    <Compile Include="Model\PieceInfoVO.cs" />
+    <Compile Include="Model\TrayInfoVO.cs" />
+    <Compile Include="Model\TrayStateVO.cs" />
+    <Compile Include="Recipe\CalibrationPanel.xaml.cs">
+      <DependentUpon>CalibrationPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\DefectTypeListEditPanel.xaml.cs">
+      <DependentUpon>DefectTypeListEditPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\RecipeListPanel.xaml.cs">
+      <DependentUpon>RecipeListPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\RecipeNewPanel.xaml.cs">
+      <DependentUpon>RecipeNewPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\RecipeNewPanelNoBar.xaml.cs">
+      <DependentUpon>RecipeNewPanelNoBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\RecipePanel.xaml.cs">
+      <DependentUpon>RecipePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\RecipeToolBar.xaml.cs">
+      <DependentUpon>RecipeToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recipe\YieldAlertPanel.xaml.cs">
+      <DependentUpon>YieldAlertPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Record\HistoryBatchListPanel.xaml.cs">
+      <DependentUpon>HistoryBatchListPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Record\HistoryBatchInfoPanel.xaml.cs">
+      <DependentUpon>HistoryBatchInfoPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Record\HistoryPieceInfoPanel.xaml.cs">
+      <DependentUpon>HistoryPieceInfoPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Record\LogListPanel.xaml.cs">
+      <DependentUpon>LogListPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Launcher.cs" />
+    <Compile Include="Service\LicenseManager.cs" />
+    <Compile Include="Service\RecipeManager.cs" />
+    <Compile Include="Sys\AutoSchedulingPanel.xaml.cs">
+      <DependentUpon>AutoSchedulingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\IOControlPanel.xaml.cs">
+      <DependentUpon>IOControlPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\OfflineTestPanel.xaml.cs">
+      <DependentUpon>OfflineTestPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\PLCControlPanel.xaml.cs">
+      <DependentUpon>PLCControlPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SchedulingPageLayout.xaml.cs">
+      <DependentUpon>SchedulingPageLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\ShowMsgBoxCtrlPanel.xaml.cs">
+      <DependentUpon>ShowMsgBoxCtrlPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserControlPanel.xaml.cs">
+      <DependentUpon>UserControlPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserEditPanel.xaml.cs">
+      <DependentUpon>UserEditPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserToolBar.xaml.cs">
+      <DependentUpon>UserToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AutoClosingMessageBox.cs" />
+    <Compile Include="ViewModel\AutoSchedulingPanelViewModel.cs" />
+    <Compile Include="ViewModel\CalibrationPanelViewModel.cs" />
+    <Compile Include="ViewModel\DataOutPutPanelViewModel.cs" />
+    <Compile Include="ViewModel\DefectTypeListEditPanelViewModel.cs" />
+    <Compile Include="ViewModel\HistoryBatchListViewModel.cs" />
+    <Compile Include="ViewModel\HistoryBatchInfoPanelViewModel.cs" />
+    <Compile Include="ViewModel\HistoryPieceInfoPanelViewModel.cs" />
+    <Compile Include="ViewModel\InlineInspectionPanelViewModel.cs" />
+    <Compile Include="ViewModel\InspectionInfoPanelViewModel.cs" />
+    <Compile Include="ViewModel\IOControlPanelViewModel.cs" />
+    <Compile Include="ViewModel\LiveImageViewModel.cs" />
+    <Compile Include="ViewModel\LocalOutPutPanelViewModel.cs" />
+    <Compile Include="ViewModel\LoginPasswordBoxHelper.cs" />
+    <Compile Include="ViewModel\LogListViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\OfflineTestPanelViewModel.cs" />
+    <Compile Include="ViewModel\PasswordBoxAssistant.cs" />
+    <Compile Include="ViewModel\PLCControlPanelViewModel.cs" />
+    <Compile Include="ViewModel\RecipeConfigBaseViewModel.cs" />
+    <Compile Include="ViewModel\RecipeListViewModel.cs" />
+    <Compile Include="ViewModel\RecipePageViewModel.cs" />
+    <Compile Include="ViewModel\RecipePanelViewModel.cs" />
+    <Compile Include="ViewModel\RecordPageViewModel.cs" />
+    <Compile Include="ViewModel\ShowMsgBoxCtrlPanelViewModel.cs" />
+    <Compile Include="ViewModel\SystemPageViewModel.cs" />
+    <Compile Include="ViewModel\UserConfigBaseViewModel.cs" />
+    <Compile Include="ViewModel\UserControlPanelViewModel.cs" />
+    <Compile Include="ViewModel\UserEditPanelViewModel.cs" />
+    <Compile Include="ViewModel\YieldAlertPanelViewModel.cs" />
+    <Page Include="Base\EditDataGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cultures\StringResource.en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Cultures\StringResource.zh-TW.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Inspect\InlineInspectionPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inspect\InspectionInfoPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inspect\LegendInfoPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inspect\LotInputPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inspect\ResultInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inspect\StatisticPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inspect\SystemLogPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Recipe\CalibrationPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recipe\DefectTypeListEditPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recipe\RecipeListPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recipe\RecipeNewPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recipe\RecipeNewPanelNoBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recipe\RecipePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recipe\RecipeToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recipe\YieldAlertPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Record\HistoryBatchListPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Record\HistoryBatchInfoPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Record\HistoryPieceInfoPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Record\LogListPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\AutoSchedulingPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\IOControlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\OfflineTestPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\PLCControlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\SchedulingPageLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\ShowMsgBoxCtrlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\UserControlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\UserEditPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sys\UserToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Modules\COM.Service\COM.Service.csproj">
+      <Project>{89CDF392-E7E8-4B03-BD27-3588D2F9ABF1}</Project>
+      <Name>COM.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\COM\COM.Base\COM.Base.csproj">
+      <Project>{E0E45D02-B8D6-4A3C-B651-6088018E0884}</Project>
+      <Name>COM.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\COM\COM.Template\COM.Template.csproj">
+      <Project>{27b6896e-852b-4cd8-b7cd-834716adb3ee}</Project>
+      <Name>COM.Template</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\COM\COM\COM.csproj">
+      <Project>{0E115FE1-6670-4970-B204-BA219E28A9F5}</Project>
+      <Name>COM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\DataFormater\DataFormater.csproj">
+      <Project>{345878c4-570c-4d2f-85fd-8c64210c31c0}</Project>
+      <Name>DataFormater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\MVS\MVS.csproj">
+      <Project>{2C0FF859-92C6-4C2A-86E3-ED48A170B545}</Project>
+      <Name>MVS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Modules\Sys.Extensions\Sys.Extensions\Sys.Extensions.csproj">
+      <Project>{C38653F8-460C-4A82-BFBA-389BB3D953AE}</Project>
+      <Name>Sys.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLAlgorithm\CL.Algorithm.csproj">
+      <Project>{84EEBC7E-E43E-47AD-AB67-EFEF62FE3A0F}</Project>
+      <Name>CL.Algorithm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLControls\CLControls.csproj">
+      <Project>{6c483c8d-f55b-4e47-a98e-72d741d20d86}</Project>
+      <Name>CLControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLObject\CLObject.csproj">
+      <Project>{0252a4e6-c753-485b-8532-97ad4594eca5}</Project>
+      <Name>CLObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{dd3f7b87-e552-4d2e-a986-3ab30ed72f3e}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="ADT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit">
+      <Version>4.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="FilterDataGrid">
+      <Version>1.2.5</Version>
+    </PackageReference>
+    <PackageReference Include="LiveCharts.Wpf">
+      <Version>0.9.7</Version>
+    </PackageReference>
+    <PackageReference Include="NLog">
+      <Version>4.7.5</Version>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Dynamic">
+      <Version>1.0.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ADT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ADT_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\smile_small_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Import.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
